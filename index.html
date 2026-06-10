@@ -567,10 +567,10 @@
             if(!inactiveDesk) {
                 alert("이미 스튜디오를 최대(6석)로 확장했습니다!"); return;
             }
-            if(company.cash < 5000000) {
-                alert("법인 자금이 부족합니다. (확장 비용: 500만원)"); return;
+            if(company.cash < 500000) {
+                alert("법인 자금이 부족합니다. (확장 비용: 50만원)"); return;
             }
-            company.cash -= 5000000;
+            company.cash -= 500000;
             inactiveDesk.active = true;
             
             let inactiveRest = world.restAreas.find(r => !r.active);
@@ -871,7 +871,7 @@
                 expandBtn.innerText = "🏢 확장 완료 (최대)";
                 expandBtn.style.opacity = "0.4";
             } else {
-                expandBtn.innerText = "🏢 좌석 확장 (500만)";
+                expandBtn.innerText = "🏢 좌석 확장 (50만)";
                 expandBtn.style.opacity = "1";
             }
         }
